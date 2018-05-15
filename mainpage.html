@@ -1,0 +1,136 @@
+﻿<?php
+echo "hello world";
+?>
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>mainpage</title>
+    <link rel="stylesheet" href="stylesheet.css" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#jq').click(function () {
+                $("#ct1,#ct1_1,#ct1_2,#ct1_3,#ct1_4,#ct2,#ct2_1,#ct2_2,#ct2_3,#ct2_4,#ct2_5,#ct3, #ct3_1, #ct3_2, #ct3_3, #ct3_4, #ct3_5, #ct3_6,#ct4,#ct4_1,#ct4_2,#ct4_3,#ct4_4,#ct4_5,#ct0").slideToggle("fast");
+            });
+        });
+    </script>
+
+
+</head>
+<body>
+    <header>
+        <div id="header_nav">
+            <div>
+                <ul>
+                    <li class="login"><a href="login.html"style="text-decoration:none" >로그인</a></li>
+                    <li class="sing"><a href="sing.html"style="text-decoration:none">회원가입</a></li>
+                    <li class="mylist"><a href="mypage.html"style="text-decoration:none">MY리스트</a></li>
+                    <li class="pen"><a href="pen.html"style="text-decoration:none">글쓰기</a></li>
+                    <li class="center"><a href="center.html"style="text-decoration:none">고객센터</a></li>
+                </ul>
+            </div>
+            
+            <div id="header_info">
+                <div class="logo">
+                    <a href="mainpage.html" target="_blank"><img src="img\rowing.png" width="180" height="60" alt="logo" /></a>
+                </div>
+                <div class="search">
+                    <input type="text" placeholder="검색어를 입력하세요."/>
+                    <button type="submit" class="search_btn"><span class="txt.w">검색</span></button>
+                </div>
+            </div>
+        </div>
+
+    </header><hr class="topline"/><hr class="headerline"/>
+
+
+    <div id="content">
+        <div id="jq0">
+            <div id="jq">❀카테고리</div>
+            <div id="ct1" style="text-decoration:none"><a href="http://www.naver.com">의류</a></div>
+            <div id="ct1_1" style="text-decoration:none"><a href="ex\1.html">남성 의류</a></div>
+            <div id="ct1_2" style="text-decoration:none"><a href="ex\2.html">여성 의류</a></div>
+            <div id="ct1_3" style="text-decoration:none"><a href="ex\3.html">남성 신발</a></div>
+            <div id="ct1_4" style="text-decoration:none"><a href="ex\4.html">여성 신발</a></div>
+
+            <div id="ct2" style="text-decoration:none"><a href="#none">잡화/뷰티</a></div>
+            <div id="ct2_1" style="text-decoration:none"><a href="ex\5.html">액세서리</a></div>
+            <div id="ct2_2" style="text-decoration:none"><a href="ex\6.htmll">화장품</a></div>
+            <div id="ct2_3" style="text-decoration:none"><a href="ex\7.html">패션잡화</a></div>
+            <div id="ct2_4" style="text-decoration:none"><a href="ex\8.html">단종/한정판</a></div>
+            <div id="ct2_5" style="text-decoration:none"><a href="ex\9.html">명품신발</a></div>
+
+            <div id="ct3" style="text-decoration:none"><a href="#none">가전/디지털</a></div>
+            <div id="ct3_1" style="text-decoration:none"><a href="ex\10.html">가전제품</a></div>
+            <div id="ct3_2" style="text-decoration:none"><a href="ex\11.html">컴퓨터</a></div>
+            <div id="ct3_3" style="text-decoration:none"><a href="ex\12.html">노트북/맥북</a></div>
+            <div id="ct3_4" style="text-decoration:none"><a href="ex\13.html">모바일</a></div>
+            <div id="ct3_5" style="text-decoration:none"><a href="ex\14.html">카메라</a></div>
+            <div id="ct3_6" style="text-decoration:none"><a href="ex\15.html">음향/태블릿</a></div>
+
+            <div id="ct4" style="text-decoration:none"><a href="#none">기타/취미</a></div>
+            <div id="ct4_1" style="text-decoration:none"><a href="ex\16.html">도서/책</a></div>
+            <div id="ct4_2" style="text-decoration:none"><a href="ex\17.html">악기/예술</a></div>
+            <div id="ct4_3" style="text-decoration:none"><a href="ex\18.html">티켓/상품권</a></div>
+            <div id="ct4_4" style="text-decoration:none"><a href="ex\19.html">피규어/취미</a></div>
+            <div id="ct4_5" style="text-decoration:none"><a href="ex\20.html">애완용품</a></div>
+
+            <div id="ct0" style="text-decoration:none"><a href="ex\21.html">무료나눔</a></div>
+        </div>
+    </div>
+            <!--마케팅,배너-->
+        <div id="main_banner">
+            <div>Side Banner<img src="flower1.jpg" width="180" height="215"/></div>
+            <div>Main maketing banner<img src="img\flower.png"width="520"height="215" /></div>
+            <div>Side Banner</div>
+            <div>Side makerting</div>
+        </div>
+        <!--실시간 인기물품-->
+        <div id="Populararticlesk">
+            <div>first</div>
+            <div>two</div>
+            <div>three</div>
+            <div>four</div>
+            <div>faive</div>
+            <div>six</div>
+        </div>
+        <div id="side_banner"><!--하위배너-->
+            <div>side banner-1-</div>
+            <div>side banner-2-</div>
+        </div><br />
+        <div id="Shorttimeoction">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+    
+    <div id="footer">
+         <hr />
+        <div class="service">
+            <div>
+                <ul>
+                    <li><a href="#none" style="text-decoration:none">회사소개</a></li>
+                    <li><a href="#none" style="text-decoration:none">채용정보</a></li>
+                    <li><a href="#none" style="text-decoration:none">이용약관</a></li>
+                    <li><a href="#none" style="text-decoration:none">전자금융거래약관</a></li>
+                    <li><a href="#none" style="text-decoration:none">개인정보처리방침</a></li>
+                    <li><a href="#none" style="text-decoration:none">청소년보호정책</a></li>
+                    <li><a href="#none" style="text-decoration:none">제휴광고</a></li>
+                    <li><a href="#none" style="text-decoration:none">판매자광고</a></li>
+                    <li><a href="#none" style="text-decoration:none">판매관리</a></li>
+                </ul>
+            </div><br />
+            <h3>고객문의</h3>
+            <p class="pone">Tel:010-4131-7304<br />
+            Mail:nclet@naver.com</p>
+        </div>
+    </div>
+ 
+</body>
+</html>

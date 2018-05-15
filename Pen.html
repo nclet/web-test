@@ -1,0 +1,769 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>게시판</title>
+    <script>
+            $(document).ready(function () {
+                $('#jq').click(function () {
+                    $("#ct1,#ct1_1,#ct1_2,#ct1_3,#ct1_4,#ct2,#ct2_1,#ct2_2,#ct2_3,#ct2_4,#ct2_5,#ct3, #ct3_1, #ct3_2, #ct3_3, #ct3_4, #ct3_5, #ct3_6,#ct4,#ct4_1,#ct4_2,#ct4_3,#ct4_4,#ct4_5,#ct0").slideToggle("fast");
+                });
+            });
+    </script>
+
+    <style>
+        header {
+            width: 100%;
+            background-color: #ffffff;
+            margin: 0 auto;
+        }
+        .headerline {
+            border: 2px solid #0099ff;
+            position: absolute;
+            left: 285px;
+            top: 160px;
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        .topline {
+            border: 1px solid #ffb3b3;
+            position: absolute;
+            top: 105px;
+            left: 285px;
+            width: 1000px;
+            margin: 0 auto;
+        } 
+         #header_nav{ 
+            margin: 0;
+            overflow: hidden;
+            width: 100%;
+            height: 80px;
+            line-height: 40px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .header_img {
+            position: absolute;
+            left: 420px;
+            margin: 10px 5px 5px 0;
+        }
+
+        .header_search input {
+            float: left;
+            padding: 5px;
+            margin: 17px 0 0 0;
+            margin-left: 580px;
+            border: 3px solid #7382ff;
+            border-radius: 3px;
+            width: 440px;
+            height: 40px;
+        }
+
+        .inpo_search_btn1 {
+            width: 60px;
+            float: left;
+            height: 50px;
+            padding: 5px;
+            margin: 19px 0 0 10px;
+            border: 1px solid #808080;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 15px;
+            background-color: #1c1afe;
+            color: white;
+        }
+
+            .inpo_search_btn1:hover {
+                background-color: #9ea9ff;
+            }
+
+        #header_nav ul li {
+            float: right;
+            margin-top: 90px;
+            margin-right: 15px;
+            list-style: none;
+        }
+        #header_nav .login {
+            position: absolute;
+            right: 680px;
+        }
+
+        #header_nav .sing {
+            position: absolute;
+            right: 580px;
+        }
+
+        #header_nav .mylist {
+            position: absolute;
+            right: 480px;
+        }
+
+        #header_nav .pen {
+            position: absolute;
+            right: 400px;
+        }
+
+        #header_nav .center {
+            position: absolute;
+            right: 300px;
+        }
+     
+
+        #wrap{margin:0 auto;
+              width:600px;
+              overflow:hidden;
+        }
+
+        .title{border:1px solid #ffffff;
+               float:left;
+               width:150px;
+               height:50px;
+               margin-top:100px;
+               margin-bottom:30px;
+               background:#ff5f5f;
+               border-radius:5px;
+        }
+
+        .title h2{color:#ffffff;
+                  text-align:center;
+                  line-height:10px;
+        }
+        .title_1 {
+            float:left;
+            border: 1px solid #ffffff;
+            width: 150px;
+            height: 50px;
+            margin-top:100px;
+            background: #0099ff;
+            border-radius: 5px;
+        }
+            .title_1 h2 {
+                color: #ffffff;
+                text-align: center;
+                line-height: 10px;
+            }
+            .title:hover{background-color:#f8a6a6;}
+            .title_1:hover{background-color:#83ceff;}
+        fieldset{border:2px solid #0099ff;
+                 border-radius:6px;
+                 height:500px;
+        }
+        .titleba {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 20px 0 30px 25px;
+        }
+        .titlename {
+            margin-left: 20px;
+            height: 25px;
+            padding: 3px;
+            width: 380px;
+        }
+        .category {
+            font-size: 18px;
+            font-weight:bold;
+            float: left;
+            margin-left:50px;
+        }
+        .category1 {
+            width: 100px;
+            height: 25px;
+            margin-left:20px;
+            font-size: 15px;
+            background-color: #c9ffcd;
+        }
+        .category1_1 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-right: 10px;
+            float: left;
+            margin-left: 30px;
+        }
+        .category1_2 {
+            width: 100px;
+            height: 25px;
+            margin-left: 20px;
+            font-size: 15px;
+            background-color: #c9ffcd;
+        }
+        .category_1 {
+            float: left;
+            font-size: 18px;
+            font-weight: bold;
+            margin-left:50px;
+        }
+        .category2 {
+            width: 100px;
+            height: 25px;
+            font-size: 15px;
+            margin-left: 20px;
+            margin-top: 10px;
+            background-color: #c9ffcd;
+        }
+        .category_3 {
+            float: left;
+            margin-top:10px;
+            margin-bottom:20px;
+            font-size: 18px;
+
+            font-weight: bold;
+            margin-left: 30px
+        }
+        .category_33 {
+            width: 100px;
+            height: 25px;
+            margin-left: 20px;
+            margin-right:80px;
+            font-size: 15px;
+            background-color: #c9ffcd;
+        }
+        .money {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 40px 0 0px 30px;
+        }
+        .money1 {
+            border:2px solid #ffe4e4;
+            margin-left:30px;
+            height: 25px;
+            padding: 4px;
+            width: 375px;
+        }
+
+        .textrea1 {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0 0 10px 40px;
+        }
+        .titletext {
+            border: 2px solid #bdd9ff;
+            margin-left: 20px;
+            height: 180px;
+            padding: 3px;
+            width: 375px;
+        }
+
+        .pic {
+            margin-left: 20px;
+            font-size:20px;
+            font-weight:bold;
+            color:#0099ff;
+            
+        }
+      
+        .file1{border:1px solid #0099ff;
+        }       
+        
+        .ok{background-color:#ff7500;
+            color:#ffffff;
+            font-size:24px;
+            font-weight:bold;
+            width:150px;
+            height:60px;
+            margin:30px 0 0 225px;
+        }
+            .ok:hover {
+               background-color:#ffcf82;}
+        #footer{
+            width: 100%;
+            position: absolute;
+            top: 900px;
+            height: 100px;
+            background-color: #ffffff;
+            font-size: 15px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+
+            #footer .service ul li {
+                font-weight: bold;
+                list-style: none;
+                float: left;
+                margin-left: 65px;
+            }
+
+            #footer .service h3 {
+                margin-right: 50px;
+                font-size: 20px;
+                float: right;
+            }
+
+            #footer .service p {
+                font-size: 14px;
+                float: right;
+                margin-top: 40px;
+            }
+        a:link {
+            color: #007cd0;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: #007cd0;
+            text-decoration: none;
+        }
+
+        a:active {
+            color: #007cd0;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #5ad7ff;
+            text-decoration: none;
+        }
+
+        #jq0, #jq {
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        #jq {
+            position: absolute;
+            left: 290px;
+            top: 109px;
+            width: 200px;
+            line-height: 45px;
+            height: 50px;
+            background-color: #929292;
+            color: white;
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        #ct1, #ct1_1, #ct1_2, #ct1_3, #ct1_4, #ct2, #ct2_1,
+        #ct2_2, #ct2_3, #ct2_4, #ct2_5, #ct3, #ct3_1,
+        #ct3_2, #ct3_3, #ct3_4, #ct3_5, #ct3_6, #ct4, #ct4_1, #ct4_2, #ct4_3, #ct4_4, #ct4_5, #ct0 {
+            display: none;
+            width: 100px;
+            height: 25px;
+            line-height: 25px;
+            text-align: center;
+            background-color: #efefef;
+            border: 1px solid #dddddd;
+        }
+
+        #ct1 {
+            position: absolute;
+            font-weight: bold;
+            background: #c2c2c2;
+            top: 150px;
+            left: 50px;
+        }
+
+        #ct1_1 {
+            position: absolute;
+            top: 175px;
+            left: 50px;
+        }
+
+        #ct1_2 {
+            position: absolute;
+            top: 200px;
+            left: 50px;
+        }
+
+        #ct1_3 {
+            position: absolute;
+            top: 225px;
+            left: 50px;
+        }
+
+        #ct1_4 {
+            position: absolute;
+            top: 250px;
+            left: 50px;
+        }
+
+        #ct1:hover {
+            background-color: #f8f8f8;
+        }
+
+        #ct1_1:hover {
+            background-color: #f8f8f8;
+        }
+
+        #ct1_2:hover {
+            background-color: #f8f8f8;
+        }
+
+        #ct1_3:hover {
+            background-color: #f8f8f8;
+        }
+
+        #ct1_4:hover {
+            background-color: #f8f8f8;
+        }
+
+
+        #ct2 {
+            position: absolute;
+            font-weight: bold;
+            background: #c2c2c2;
+            top: 150px;
+            left: 155px;
+        }
+
+        #ct2_1 {
+            position: absolute;
+            top: 175px;
+            left: 155px;
+        }
+
+        #ct2_2 {
+            position: absolute;
+            top: 200px;
+            left: 155px;
+        }
+
+        #ct2_3 {
+            position: absolute;
+            top: 225px;
+            left: 155px;
+        }
+
+        #ct2_4 {
+            position: absolute;
+            top: 250px;
+            left: 155px;
+        }
+
+        #ct2_5 {
+            position: absolute;
+            top: 275px;
+            left: 155px;
+        }
+
+
+        #ct2:hover {
+            background-color: #f8f8f8;
+        }
+
+        #ct2_1:hover {
+            background-color: #f8f8f8;
+        }
+
+        #ct2_2:hover {
+            background-color: #f8f8f8;
+        }
+
+        #ct2_3:hover {
+            background-color: #f8f8f8;
+        }
+
+        #ct2_4:hover {
+            background-color: #f8f8f8;
+        }
+
+        #ct2_5:hover {
+            background-color: #f8f8f8;
+        }
+
+        #ct3 {
+            position: absolute;
+            font-weight: bold;
+            background: #c2c2c2;
+            top: 320px;
+            left: 50px;
+        }
+
+        #ct3_1 {
+            position: absolute;
+            top: 345px;
+            left: 50px;
+        }
+
+        #ct3_2 {
+            position: absolute;
+            top: 370px;
+            left: 50px;
+        }
+
+        #ct3_3 {
+            position: absolute;
+            top: 395px;
+            left: 50px;
+        }
+
+        #ct3_4 {
+            position: absolute;
+            top: 420px;
+            left: 50px;
+        }
+
+        #ct3_5 {
+            position: absolute;
+            top: 445px;
+            left: 50px;
+        }
+
+        #ct3_6 {
+            position: absolute;
+            top: 470px;
+            left: 50px;
+        }
+
+        #ct3:hover {
+            background-color: #f8f8f8;
+        }
+
+        #ct3_1:hover {
+            background-color: #f8f8f8;
+        }
+
+        #ct3_2:hover {
+            background-color: #f8f8f8;
+        }
+
+        #ct3_3:hover {
+            background-color: #f8f8f8;
+        }
+
+        #ct3_4:hover {
+            background-color: #f8f8f8;
+        }
+
+        #ct3_5:hover {
+            background-color: #f8f8f8;
+        }
+
+        #ct3_6:hover {
+            background-color: #f8f8f8;
+        }
+
+
+        #ct4 {
+            position: absolute;
+            font-weight: bold;
+            background: #c2c2c2;
+            top: 320px;
+            left: 155px;
+        }
+
+        #ct4_1 {
+            position: absolute;
+            top: 345px;
+            left: 155px;
+        }
+
+        #ct4_2 {
+            position: absolute;
+            top: 370px;
+            left: 155px;
+        }
+
+        #ct4_3 {
+            position: absolute;
+            top: 395px;
+            left: 155px;
+        }
+
+        #ct4_4 {
+            position: absolute;
+            top: 420px;
+            left: 155px;
+        }
+
+        #ct4_5 {
+            position: absolute;
+            top: 445px;
+            left: 155px;
+        }
+
+        #ct4:hover {
+            background-color: #f8f8f8;
+        }
+
+        #ct4_1:hover {
+            background-color: #f8f8f8;
+        }
+
+        #ct4_2:hover {
+            background-color: #f8f8f8;
+        }
+
+        #ct4_3:hover {
+            background-color: #f8f8f8;
+        }
+
+        #ct4_4:hover {
+            background-color: #f8f8f8;
+        }
+
+        #ct4_5:hover {
+            background-color: #f8f8f8;
+        }
+
+        #ct0 {
+            position: absolute;
+            font-weight: bold;
+            background: #c2c2c2;
+            top: 520px;
+            left: 50px;
+        }
+
+            #ct0:hover {
+                background-color: #f8f8f8;
+            }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div id="header_nav">
+            <div class="header_search">
+                <a href="mainpage.html"><img src="img\rowing.png" width="150" height="70" class="header_img" /> </a>
+                <input type="text" placeholder="검색어를 입력해주십시오" />
+                <button type="submit" class="inpo_search_btn1"><span class="txt1">검색</span></button>
+            </div>
+            <div>
+                <ul>
+                    <li class="login"><a href="login.html" style="text-decoration:none">로그인</a></li>
+                    <li class="sing"><a href="sing.html" style="text-decoration:none">회원가입</a></li>
+                    <li class="mylist"><a href="mypage.html" style="text-decoration:none">MY리스트</a></li>
+                    <li class="pen"><a href="#none" style="text-decoration:none">글쓰기</a></li>
+                    <li class="center"><a href="center.html" style="text-decoration:none">고객센터</a></li>
+                </ul>
+            </div>
+        </div>
+    </header><hr class="topline" /><hr class="headerline" />
+ 
+    <div id="wrap">
+        <div class="board">
+            <div class="title"><h2>일반판매</h2></div>
+            <div class="title_1"><h2>경매등록</h2>
+        </div>
+            <br />
+            <form>
+                <fieldset>
+                    <div class="titleba">제품명<input type="text" name="titlename" class="titlename" required /></div>
+                    <div class="category">
+                       카테고리
+                        <span>
+                            <select class="category1">
+                                <option value="남성의류">남성의류</option>
+                                <option value="여성의류">여성의류</option>
+                                <option value="브랜드남성">브랜드남성</option>
+                                <option value="브랜드여성">브랜드여성</option>
+                                <option value="도서/책">도서/책</option>
+                                <option value="악기/예술">악기/예술</option>
+                                <option value="티켓/상품권">티켓/상품권</option>
+                                <option value="피규어/취미">피규어/취미</option>
+                                <option value="애완용품">애완용품</option>
+                                <option value="액세서리">액세서리</option>
+                                <option value="화장품">화장품</option>
+                                <option value="명품잡화">명품잡화</option>
+                                <option value="한정판">한정판</option>
+                                <option value="신발">신발</option>
+                                <option value="명품신발">명품신발</option>
+                                <option value="가전제품">가전제품</option>
+                                <option value="컴퓨터">컴퓨터</option>
+                                <option value="노트북">노트북</option>
+                                <option value="휴대폰">휴대폰</option>
+                                <option value="카메라">카메라</option>
+                                <option value="태블릿">태블릿</option>
+                                <option value="무료나눔">무료나눔</option>
+                            </select>
+                        </span>
+                    </div>
+                    <div class="category1_1">
+                        하위메뉴
+                        <span>
+                            <select class="category1_2">
+                                <option value="menuselct">메뉴선택</option>
+                                
+                            </select>
+                        </span>
+                    </div>
+                    <div class="category_1">상품상태
+                        <span>
+                            <select class="category2">
+                                <option value="중고">중고</option>
+                                <option value="새상품">새상품</option>
+                            </select>
+                        </span>
+                    </div>
+                    <div class="category_3">배송정보
+                        <span>
+                            <select class="category_33">
+                                <option value="무료배송">무료배송</option>
+                                <option value="x">배송료별도</option>
+                            </select>
+                        </span>
+                    </div><br />
+                    <div class="money">
+                        가격<input type="text" name="money" class="money1" />
+                    </div>
+                    <br />
+                    <div class="textrea1">본문<textarea name="titletext" class="titletext" cols="85" rows="85"></textarea></div><br />
+                    <div class="pic">사진등록
+                       <input type="file" name="file1" class="file1" />
+                    </div>
+                </fieldset>
+                <button type="submit" name="ok" class="ok">등록하기</button>
+            </form>
+        </div>
+    </div>
+    <div id="content">
+        <div id="jq0">
+            <div id="jq">❀카테고리</div>
+            <div id="ct1" style="text-decoration:none"><a href="http://www.naver.com">의류</a></div>
+            <div id="ct1_1" style="text-decoration:none"><a href="ex\1.html">남성 의류</a></div>
+            <div id="ct1_2" style="text-decoration:none"><a href="ex\2.html">여성 의류</a></div>
+            <div id="ct1_3" style="text-decoration:none"><a href="ex\3.html">남성 신발</a></div>
+            <div id="ct1_4" style="text-decoration:none"><a href="ex\4.html">여성 신발</a></div>
+
+            <div id="ct2" style="text-decoration:none"><a href="#none">잡화/뷰티</a></div>
+            <div id="ct2_1" style="text-decoration:none"><a href="ex\5.html">액세서리</a></div>
+            <div id="ct2_2" style="text-decoration:none"><a href="ex\6.htmll">화장품</a></div>
+            <div id="ct2_3" style="text-decoration:none"><a href="ex\7.html">패션잡화</a></div>
+            <div id="ct2_4" style="text-decoration:none"><a href="ex\8.html">단종/한정판</a></div>
+            <div id="ct2_5" style="text-decoration:none"><a href="ex\9.html">명품신발</a></div>
+
+            <div id="ct3" style="text-decoration:none"><a href="#none">가전/디지털</a></div>
+            <div id="ct3_1" style="text-decoration:none"><a href="ex\10.html">가전제품</a></div>
+            <div id="ct3_2" style="text-decoration:none"><a href="ex\11.html">컴퓨터</a></div>
+            <div id="ct3_3" style="text-decoration:none"><a href="ex\12.html">노트북/맥북</a></div>
+            <div id="ct3_4" style="text-decoration:none"><a href="ex\13.html">모바일</a></div>
+            <div id="ct3_5" style="text-decoration:none"><a href="ex\14.html">카메라</a></div>
+            <div id="ct3_6" style="text-decoration:none"><a href="ex\15.html">음향/태블릿</a></div>
+
+            <div id="ct4" style="text-decoration:none"><a href="#none">기타/취미</a></div>
+            <div id="ct4_1" style="text-decoration:none"><a href="ex\16.html">도서/책</a></div>
+            <div id="ct4_2" style="text-decoration:none"><a href="ex\17.html">악기/예술</a></div>
+            <div id="ct4_3" style="text-decoration:none"><a href="ex\18.html">티켓/상품권</a></div>
+            <div id="ct4_4" style="text-decoration:none"><a href="ex\19.html">피규어/취미</a></div>
+            <div id="ct4_5" style="text-decoration:none"><a href="ex\20.html">애완용품</a></div>
+
+            <div id="ct0" style="text-decoration:none"><a href="ex\21.html">무료나눔</a></div>
+        </div>
+    </div>
+        <footer>
+            <div id="footer">
+                <div class="service">
+                    <hr />
+                    <div>
+                        <ul>
+                            <li><a href="#none" style="text-decoration:none">회사소개</a></li>
+                            <li><a href="#none" style="text-decoration:none">채용정보</a></li>
+                            <li><a href="#none" style="text-decoration:none">이용약관</a></li>
+                            <li><a href="#none" style="text-decoration:none">전자금융거래약관</a></li>
+                            <li><a href="#none" style="text-decoration:none">개인정보처리방침</a></li>
+                            <li><a href="#none" style="text-decoration:none">청소년보호정책</a></li>
+                            <li><a href="#none" style="text-decoration:none">제휴광고</a></li>
+                            <li><a href="#none" style="text-decoration:none">판매자광고</a></li>
+                            <li><a href="#none" style="text-decoration:none">판매관리</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+</body>
+</html>
